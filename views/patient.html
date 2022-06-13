@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ideation 2 (self-managing healthcare)</title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/customStyle.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">Self-managing healthcare</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/patient">Patient </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/doctor">Doctor </a>
+            </li>
+
+            <li class="nav-item dropdown d-flex ms-auto">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">About Us</a>
+                <a class="dropdown-item" href="#">Contact Us</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="container mt-2">
+      <form method="post" action="/patient-thank-you">
+        <div class="w-50 m-auto">
+          <div>
+            <label for="email" class="form-label mt-4">Your Email</label>
+            <input type="email" class="form-control email" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email" readonly required />
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="mt-4">
+            <label for="Occupation" class="form-label">Occupation</label>
+            <select class="form-select" id="Occupation" name="occupationSelect">
+              <option value="consultant" name="occupationSelect">Consultant</option>
+              <option value="technician" name="occupationSelect">Technician</option>
+              <option value="software developer" name="occupationSelect">Software Developer</option>
+              <option value="design" name="occupationSelect">Design</option>
+              <option value="teacher" name="occupationSelect">Teacher</option>
+              <option value="engineer" name="occupationSelect">Engineer</option>
+              <option value="accountant" name="occupationSelect">Accountant</option>
+              <option value="scientist" name="occupationSelect">Scientist</option>
+              <option value="freelance" name="occupationSelect">Freelance</option>
+              <option value="entrepreneurer" name="occupationSelect">Entrepreneurer</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="mt-4">
+            <label class="form-label"> Gender </label>
+            <div class="d-flex">
+              <div class="form-check me-5">
+                <label for="maleSelect"> Male </label>
+                <input type="radio" class="form-check-input" name="genderSelect" value="male" checked="" id="maleSelect" />
+              </div>
+              <div class="form-check">
+                <label for="femaleSelect"> Female </label>
+                <input type="radio" class="form-check-input" name="genderSelect" value="female" id="femaleSelect" />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label for="Age" class="form-label mt-4">Age</label>
+            <input type="number" class="form-control" id="age" aria-describedby="ageHelp" placeholder="Enter age" name="age" />
+          </div>
+
+          <div class="mt-4">
+            <label class="form-label"> Are you currently under any medical condition </label>
+            <div class="d-flex">
+              <div class="form-check me-5">
+                <label for="medicalConditionYes"> Yes </label>
+                <input type="radio" class="form-check-input" name="medicalConditionSelect" value="yes" checked="" id="medicalConditionYes" />
+              </div>
+              <div class="form-check">
+                <label for="medicalConditionNo"> No </label>
+                <input type="radio" class="form-check-input" name="medicalConditionSelect" value="no" id="medicalConditionNo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label class="form-label"> Select all the medical app and wearables you are using (as many as you like) </label>
+            <div class="app-grid">
+              <div class="bubble-default">Generis</div>
+              <div class="bubble-default">Teladoc</div>
+              <div class="bubble-default">Calcium</div>
+              <div class="bubble-default">Epocrates</div>
+              <div class="bubble-default">PEPID</div>
+              <div class="bubble-default">UpToDate</div>
+              <div class="bubble-default">OptoView</div>
+              <div class="bubble-default">AirStrip</div>
+              <div class="bubble-default">Medici</div>
+              <div class="bubble-default">Apple Health</div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label class="form-label"> Would you willing to share your health data with your family doctor </label>
+            <div class="d-flex">
+              <div class="form-check me-5">
+                <label for="consentSelectYes"> Yes </label>
+                <input type="radio" class="form-check-input" name="consentSelect" value="yes" checked="" id="consentSelectYes" />
+              </div>
+              <div class="form-check">
+                <label for="consentSelectNo"> No </label>
+                <input type="radio" class="form-check-input" name="consentSelect" value="no" id="consentSelectNo" />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary mt-4">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="/src/patient.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

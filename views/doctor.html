@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ideation 2 (self-managing healthcare)</title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/customStyle.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">Self-managing healthcare</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/patient">Patient </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/doctor">Doctor </a>
+            </li>
+
+            <li class="nav-item dropdown d-flex ms-auto">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">About Us</a>
+                <a class="dropdown-item" href="#">Contact Us</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="container mt-2">
+      <form method="post" action="/doctor-thank-you">
+        <div class="w-50 m-auto">
+          <div>
+            <label for="email" class="form-label mt-4">Your Email</label>
+            <input type="email" class="form-control email" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email" readonly required />
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="mt-5">
+            <label class="form-label">Importance level of having patience digital or wearable health data</label>
+            <input type="range" class="form-range" min="1" max="5" step="1" name="importanceRange" />
+          </div>
+
+          <div class="mt-5">
+            <label class="form-label"> Select all the medical app and wearables you are using (as many as you like) </label>
+            <div class="app-grid">
+              <div class="bubble-default">category A</div>
+              <div class="bubble-default">category B</div>
+              <div class="bubble-default">category C</div>
+              <div class="bubble-default">category D</div>
+              <div class="bubble-default">category E</div>
+              <div class="bubble-default">category F</div>
+              <div class="bubble-default">category G</div>
+              <div class="bubble-default">category H</div>
+              <div class="bubble-default">category I</div>
+              <div class="bubble-default">category J</div>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <label class="form-label"> Would you willing to introduce our program to your patient </label>
+            <div class="d-flex">
+              <div class="form-check me-5">
+                <label for="consentSelectYes"> Yes </label>
+                <input type="radio" class="form-check-input" name="consentSelect" value="yes" checked="" id="consentSelectYes" />
+              </div>
+              <div class="form-check">
+                <label for="consentSelectNo"> No </label>
+                <input type="radio" class="form-check-input" name="consentSelect" value="no" id="consentSelectNo" />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label for="healthCareSystem" class="form-label mt-4">Your health care system you are using</label>
+            <textarea class="form-control" id="healthCareSystem" rows="3" name="healthCareSystem"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary mt-4">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="/src/doctor.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
